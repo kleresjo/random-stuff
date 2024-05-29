@@ -9,14 +9,12 @@ function App() {
 
   return (
    <BrowserRouter>
-    <Navbar  />
     <Routes>
     <Route path="/" element={<LandingPage />} />
     <Route path="/kassa" element={<CartPage />} />
     <Route path="/betalning" element={<CheckoutPage />} />
-    <Route path="/product" element={<ProductPage />} />
+    <Route path="/produkt/:id" element={<ProductPage />} />
     </Routes>
-    <Footer  />
     </BrowserRouter>
   )
 }
