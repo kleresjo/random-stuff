@@ -1,0 +1,8 @@
+.checkoutpage-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkoutpage-h1 {
+  margin-bottom: 100px;
+}

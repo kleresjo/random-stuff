@@ -1,0 +1,20 @@
+.invoice-adress-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.invoice-adress-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 50%;
+  border: 1px solid black;
+  padding: 20px 20px 50px 20px;
+  background-color: rgb(221, 221, 221);
+  align-items: start;
+}
+
+.invoice-adress-input {
+  width: 40%;
+  margin-bottom: 10px;
+}
