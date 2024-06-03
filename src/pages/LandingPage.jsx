@@ -1,4 +1,3 @@
-import ReadAPI from "../components/ReadAPI";
 import Hero from "../components/Hero";
 import ProductsList from "../components/ReadAPI";
 
