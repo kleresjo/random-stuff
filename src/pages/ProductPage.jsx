@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { CartContext } from "../components/CartContext";
-import ProductsList from "../components/ReadAPI";
+import { CartContext } from "../context/CartContext";
+import ProductsList from "../components/ProductsList";
 import "../styling/ProductPage.css";
+import Navbar from "../components/navbar/Navbar";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -22,24 +23,33 @@ const ProductPage = () => {
   }
 
   const handleBuyClick = () => {
-    console.log('Button clicked');
+    console.log("Button clicked");
     addToCart(product);
-    console.log('Product added to cart:', product);
-    navigate('/kassa');
+    console.log("Product added to cart:", product);
+    navigate("/cart");
   };
 
   return (
-    <div className="product-container">
-    <div className="product-content">
-      <img className="product-image" src={product.image} alt={product.title} />
-      <div className="product-details">
-        <p className="product-title">{product.title}</p>
-        <p className="product-description">{product.description}</p>
-        <p className="product-price">{product.price}kr</p>
-        <button className="product-button" onClick={(handleBuyClick)}>Köp</button>
+    <>
+      <Navbar />
+      <div className="product-container">
+        <div className="product-content">
+          <img
+            className="product-image"
+            src={product.image}
+            alt={product.title}
+          />
+          <div className="product-details">
+            <p className="product-title">{product.title}</p>
+            <p className="product-description">{product.description}</p>
+            <p className="product-price">{product.price}kr</p>
+            <button className="product-button" onClick={handleBuyClick}>
+              Köp
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </>
   );
 };
 
