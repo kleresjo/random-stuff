@@ -19,9 +19,9 @@ function ProductsList() {
       <div className='APIproduct-list'>
         {products.map(product => (
           <div key={product.id} className='APIproduct-div'>
-            <Link to={`/produkt/${product.id}`}><img src={product.image} alt={product.title} /></Link>
+            <Link to={`/product/${product.id}`}><img src={product.image} alt={product.title} /></Link>
             <h3>{product.title}</h3>
-            <Link to={`/produkt/${product.id}`}>{product.category}</Link>
+            <Link to={`/product/${product.id}`}>{product.category}</Link>
             <p>{product.description}</p>
             <div className='APIproduct-btns'>
             <p><b>{product.price}kr</b></p>
