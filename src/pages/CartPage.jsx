@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Navbar from "../components/navbar/Navbar";
 import { CartContext } from "../context/CartContext";
 import { Link, useParams } from "react-router-dom";
+import "../styling/CartPageStyling.css";
 
 const CartPage = () => {
   const { cart, removeFromCart } = useContext(CartContext);
@@ -14,30 +15,49 @@ const CartPage = () => {
 
   return (
     <>
+    
       <Navbar />
-      <div>
+    <div className="center-cart">
         <h2>CartPage</h2>
-        <div>
-          <button>
-            <Link to={"/"}>Handla mer</Link>
-          </button>
-          <button>
-            <Link to={"/payment"}>Gå till kassan</Link>
-          </button>
-        </div>
-      </div>
-      <p>Total Price: {getCartTotal(cart)} kr</p>
-      <ul>
+    <div className="cart-placing">
+      
+      <ul className="list-cart-placing">
         {cart.map((product) => (
-          <li key={product.id}>
-            <img src={product.image} alt={product.title}></img>
-            <p>{product.title}</p>
-            <p> {product.price} :-</p>
+          <li className="list-cart-content-placing" key={product.id}>
+            <div className="list-cart-picture">
+              <img
+                className="img-cart-products"
+                src={product.image}
+                alt={product.title}
+              ></img>
+            </div>
+            <div className="list-cart-info">
+              <h3>{product.title}</h3>
+              <p> {product.price} :-</p>
 
-            <button onClick={() => removeFromCart(product.id)}>radera</button>
+            <button
+              className="cart-page-link-btn"
+              onClick={() => removeFromCart(product.id)}
+              >
+              radera
+            </button>
+              </div>
           </li>
         ))}
       </ul>
+      <div className="cart-right-side-placing">
+      <p>Total Price: {getCartTotal(cart)} kr</p>
+        <div>
+          <Link to={"/"}>
+            <button className="cart-link-btn">Handla mer</button>
+          </Link>
+          <Link to={"/payment"}>
+            <button className="cart-link-btn">Gå till kassan</button>
+          </Link>
+        </div>
+      </div>
+    </div>
+    </div>
     </>
   );
 };
