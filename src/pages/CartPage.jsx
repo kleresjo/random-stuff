@@ -73,7 +73,7 @@ const CartPage = () => {
                     className="cart-page-link-btn"
                     onClick={() => removeFromCart(product.id)}
                   >
-                    radera
+                    Delete
                   </button>
                 </div>
               </li>
@@ -83,10 +83,10 @@ const CartPage = () => {
             <p>Total Price: {getCartTotal(cart)} kr</p>
             <div>
               <Link to={"/"}>
-                <button className="cart-link-btn">Handla mer</button>
+                <button className="cart-link-btn">Continue shopping</button>
               </Link>
               <Link to={"/payment"}>
-                <button className="cart-link-btn">Gå till kassan</button>
+                <button className="cart-link-btn">Go to payment</button>
               </Link>
             </div>
           </div>

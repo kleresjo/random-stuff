@@ -1,20 +1,23 @@
 import React from "react";
+import Navbar from "../components/navbar/Navbar";
 
 const ConfirmationPage = () => {
   return (
-    <div>
+    <>
+      <Navbar />
       <div>
-        <h1>ORDERBEKRÄFTELSE</h1>
-        <p>Tack för din beställning!</p>
-        <img src="" alt="" />
-        <p>
-          Vi har tagit emot din order och ett kvitto har skickats till din
-          mailadress.
-        </p>
-        <p>Ordernummer: 678319782</p>
-        <button>Fortsätt handla</button>
+        <div>
+          <h1>CONFIRMATION</h1>
+          <p>Thank you for your order!</p>
+          <img src="" alt="" />
+          <p>
+            We have received your order and a receipt has been sent to your
+            email address.
+          </p>
+          <p>Ordernumber: 678319782</p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
