@@ -23,16 +23,14 @@ const ProductPage = () => {
   }
 
   const handleBuyClick = () => {
-    if (cart.find((p) => p.id === product.id) === undefined)
-      {
-        product.itemCount = 1
-        addToCart(product);
-      }
-      else{
-        let cartCopy = cart;
-        cartCopy[cartCopy.findIndex((p) => p.id === product.id)].itemCount ++;
-        setCart(cartCopy);
-      }
+    if (cart.find((p) => p.id === product.id) === undefined) {
+      product.itemCount = 1;
+      addToCart(product);
+    } else {
+      let cartCopy = cart;
+      cartCopy[cartCopy.findIndex((p) => p.id === product.id)].itemCount++;
+      setCart(cartCopy);
+    }
     navigate("/cart");
   };
 
