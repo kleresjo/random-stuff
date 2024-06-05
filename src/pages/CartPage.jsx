@@ -1,11 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../components/navbar/Navbar";
 import { CartContext } from "../context/CartContext";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styling/CartPageStyling.css";
+
 
 const CartPage = () => {
   const { cart, removeFromCart } = useContext(CartContext);
+  
+
 
   const getCartTotal = (product) => {
     return product.reduce((accumulator, object) => {
@@ -22,8 +25,8 @@ const CartPage = () => {
     <div className="cart-placing">
       
       <ul className="list-cart-placing">
-        {cart.map((product) => (
-          <li className="list-cart-content-placing" key={product.id}>
+        {cart.map((product, index) => (
+          <li className="list-cart-content-placing" key={index}>
             <div className="list-cart-picture">
               <img
                 className="img-cart-products"
@@ -34,6 +37,13 @@ const CartPage = () => {
             <div className="list-cart-info">
               <h3>{product.title}</h3>
               <p> {product.price} :-</p>
+
+             <div>
+            <button >+</button> 
+          
+            <p>{product.itemCount}</p>
+            <button >-</button>
+            </div> 
 
             <button
               className="cart-page-link-btn"

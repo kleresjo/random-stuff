@@ -8,7 +8,7 @@ import Navbar from "../components/navbar/Navbar";
 const ProductPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const { addToCart } = useContext(CartContext);
+  const { cart, setCart, addToCart } = useContext(CartContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,9 +23,16 @@ const ProductPage = () => {
   }
 
   const handleBuyClick = () => {
-    console.log("Button clicked");
-    addToCart(product);
-    console.log("Product added to cart:", product);
+    if (cart.find((p) => p.id === product.id) === undefined)
+      {
+        product.itemCount = 1
+        addToCart(product);
+      }
+      else{
+        let cartCopy = cart;
+        cartCopy[cartCopy.findIndex((p) => p.id === product.id)].itemCount ++;
+        setCart(cartCopy);
+      }
     navigate("/cart");
   };
 
