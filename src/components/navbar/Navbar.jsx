@@ -25,7 +25,7 @@ const Navbar = () => {
       </div>
       <div>
         <div className="nav-shopping-cart-container">
-          <Link to="cart" className="nav-link">
+          <Link to="/cart" className="nav-link">
             Shopping cart
           </Link>
         </div>
