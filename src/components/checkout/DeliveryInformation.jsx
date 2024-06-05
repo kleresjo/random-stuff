@@ -13,7 +13,7 @@ const DeliveryInformation = () => {
   return (
     <div className="delivery-information-container">
       <form className="delivery-information-form">
-        <h3>Leverans</h3>
+        <h3>Delivery</h3>
         <input
           type="text"
           {...firstNameInput}
@@ -33,12 +33,12 @@ const DeliveryInformation = () => {
           className="delivery-information-input"
         />
         <div className="post-information">
-          <h4>PostNord - utlämningsställe</h4>
-          <p>3-5 arbetsdagar</p>
+          <h4>PostNord - Service point</h4>
+          <p>3-5 working days</p>
           <p>Willys Ingenmansland</p>
           <p>Ingemansväg 3</p>
           <p>123 45 Ingenmansland</p>
-          <p>Sverige</p>
+          <p>Sweden</p>
         </div>
       </form>
     </div>

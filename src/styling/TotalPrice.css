@@ -1,0 +1,16 @@
+.total-price-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid black;
+  padding: 20px 20px 50px 20px;
+  background-color: rgb(161, 201, 233);
+  align-items: start;
+}
+
+.total-price-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+}
