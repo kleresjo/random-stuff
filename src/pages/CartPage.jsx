@@ -1,16 +1,44 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../components/navbar/Navbar";
 import { CartContext } from "../context/CartContext";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styling/CartPageStyling.css";
 
 const CartPage = () => {
-  const { cart, removeFromCart } = useContext(CartContext);
+  const { cart, setCart, removeFromCart } = useContext(CartContext);
 
-  const getCartTotal = (product) => {
-    return product.reduce((accumulator, object) => {
-      return accumulator + object.price;
+  const getCartTotal = (cartToCount) => {
+    return cartToCount.reduce((accumulator, object) => {
+      return accumulator + object.price * object.itemCount;
     }, 0);
+  };
+
+  const addProduct = (index) => {
+    const updatedCart = cart.map((p, i) => {
+      if (i === index) {
+        p.itemCount++;
+        return p;
+      } else {
+        return p;
+      }
+    });
+    setCart(updatedCart);
+  };
+
+  const removeProduct = (index) => {
+    const updatedCart = cart.map((p, i) => {
+      if (i === index) {
+        p.itemCount--;
+        return p;
+      } else {
+        return p;
+      }
+    });
+    if (updatedCart[index].itemCount <= 0) {
+      removeFromCart(updatedCart[index].id);
+    } else {
+      setCart(updatedCart);
+    }
   };
 
   return (
@@ -20,8 +48,8 @@ const CartPage = () => {
         <h2>CartPage</h2>
         <div className="cart-placing">
           <ul className="list-cart-placing">
-            {cart.map((product) => (
-              <li className="list-cart-content-placing" key={product.id}>
+            {cart.map((product, index) => (
+              <li className="list-cart-content-placing" key={index}>
                 <div className="list-cart-picture">
                   <img
                     className="img-cart-products"
@@ -32,6 +60,14 @@ const CartPage = () => {
                 <div className="list-cart-info">
                   <h3>{product.title}</h3>
                   <p> {product.price} :-</p>
+
+                  <div>
+                    <button onClick={() => addProduct(index)}>+</button>
+
+                    <p>{product.itemCount}</p>
+
+                    <button onClick={() => removeProduct(index)}>-</button>
+                  </div>
 
                   <button
                     className="cart-page-link-btn"
