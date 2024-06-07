@@ -1,5 +1,5 @@
+import ProductsList from "../components/ProductsList";
 import Hero from "../components/Hero";
-import ProductsList from "../components/ReadAPI";
 
 const LandingPage = () => {
   return (

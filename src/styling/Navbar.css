@@ -1,0 +1,18 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+.cart-icon {
+  width: 50px;
+}
+
+.nav-link {
+  text-decoration: none;
+  margin-right: 20px;
+}

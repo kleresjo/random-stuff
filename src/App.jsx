@@ -4,19 +4,30 @@ import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import ProductPage from "./pages/ProductPage";
 import "./App.css";
-import { CartProvider } from "./components/CartContext";
+import { CartProvider } from "./context/CartContext";
+import AboutUsPage from "./pages/AboutUsPage";
+import ContactUsPage from "./pages/ContactUsPage";
+import { CheckoutProvider } from "./context/CheckoutContext";
+import ConfirmationPage from "./pages/ConfirmationPage";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
     <CartProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/kassa" element={<CartPage />} />
-          <Route path="/betalning" element={<CheckoutPage />} />
-          <Route path="/product/:id" element={<ProductPage />} />
-        </Routes>
-      </BrowserRouter>
+      <CheckoutProvider>
+        <BrowserRouter>
+        <Navbar />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/about" element={<AboutUsPage />} />
+            <Route path="/contact" element={<ContactUsPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/payment" element={<CheckoutPage />} />
+            <Route path="/product/:id" element={<ProductPage />} />
+            <Route path="/confirmation" element={<ConfirmationPage />} />
+          </Routes>
+        </BrowserRouter>
+      </CheckoutProvider>
     </CartProvider>
   );
 }
