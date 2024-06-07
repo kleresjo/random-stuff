@@ -5,7 +5,6 @@ import Navbar from "../components/navbar/Navbar";
 const LandingPage = () => {
   return (
     <div>
-      <Navbar />
       <Hero />
       <ProductsList />
     </div>

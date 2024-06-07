@@ -43,7 +43,6 @@ const CartPage = () => {
 
   return (
     <>
-      <Navbar />
       <div className="center-cart">
         <h2>CartPage</h2>
         <div className="cart-placing">

@@ -9,12 +9,14 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import { CheckoutProvider } from "./context/CheckoutContext";
 import ConfirmationPage from "./pages/ConfirmationPage";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
     <CartProvider>
       <CheckoutProvider>
         <BrowserRouter>
+        <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/about" element={<AboutUsPage />} />

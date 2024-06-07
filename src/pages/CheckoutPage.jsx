@@ -8,7 +8,6 @@ import Navbar from "../components/navbar/Navbar";
 const CheckoutPage = () => {
   return (
     <>
-      <Navbar />
       <div>
         <MyInformation />
         <InvoiceAdress />

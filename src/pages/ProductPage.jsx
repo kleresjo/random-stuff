@@ -36,7 +36,6 @@ const ProductPage = () => {
 
   return (
     <>
-      <Navbar />
       <div className="product-container">
         <div className="product-content">
           <img
