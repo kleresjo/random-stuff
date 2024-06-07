@@ -1,0 +1,38 @@
+.API-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.APIproducts-h1 {
+    width: 80%;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.APIproduct-list {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 20px;
+}
+
+.APIproduct-div {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    -webkit-box-shadow: 6px 7px 5px -1px rgba(143, 143, 143, 0.29);
+    -moz-box-shadow: 6px 7px 5px -1px rgba(143, 143, 143, 0.29);
+    box-shadow: 6px 7px 5px -1px rgba(143, 143, 143, 0.29);
+}
+
+.APIproduct-div img {
+    width: 70%;
+}
+
