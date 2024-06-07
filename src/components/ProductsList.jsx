@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { IoMdCart } from "react-icons/io";
+// import { IoMdCart } from "react-icons/io";
 import "../styling/ProductsAPI.css";
 
 function ProductsList() {
