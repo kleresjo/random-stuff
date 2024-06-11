@@ -1,19 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap");
 
-.API-section {
-  padding: 20px;
-}
-
-.APIproducts-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.APIproduct-filter {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .category-buttons {
   display: flex;
   gap: 20px;
@@ -41,12 +27,13 @@
   background-color: #a2c2e8;
 }
 
-.APIproduct-div {
-  border: 1px solid #ddd;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  border-radius: 5px;
+.API-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .APIproduct-list {
@@ -56,6 +43,18 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
   gap: 28px;
+}
+
+.APIproduct-div {
+  background-color: #ffffff;
+  max-height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  overflow: hidden;
+  border: transparent solid 1px;
 }
 
 .APIproduct-div:hover {
@@ -89,6 +88,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+
   .APIproduct-div img {
     width: 100%;
   }
@@ -96,21 +96,4 @@
   .APIproduct-list {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-.APIproduct-btns {
-  margin-top: 10px;
-}
-
-.APIproduct-cart-btn {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.APIproduct-cart-btn:hover {
-  background-color: #218838;
 }

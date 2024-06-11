@@ -1,5 +1,5 @@
 import { HiCursorClick } from "react-icons/hi";
-import "../styling/LogoDark";
+import "../styling/LogoDark.css";
 
 const LogoDark = () => {
   return (
