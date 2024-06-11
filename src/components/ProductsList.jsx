@@ -48,7 +48,7 @@ function ProductsList() {
             {/* <Link to={`/product/${product.id}`}>{product.category}</Link> */}
             {/* <p>{product.description}</p> */}
             <div className='APIproduct-btns'>
-              <p className='API-product-price'>{product.price}SEK</p>
+              <p className='API-product-price'>{product.price} SEK</p>
             </div>
           </div>
         ))}
