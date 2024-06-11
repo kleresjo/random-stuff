@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { IoMdCart } from "react-icons/io";
 import "../styling/ProductsAPI.css";
 
 function ProductsList() {
@@ -59,14 +58,11 @@ function ProductsList() {
             <Link to={`/product/${product.id}`}>
               <img src={product.image} alt={product.title} />
             </Link>
-            <h3>{product.title}</h3>
-            <Link to={`/product/${product.id}`}>{product.category}</Link>
-            <p>{product.description}</p>
+            <h3 className="APIproduct-h3">{product.title}</h3>
             <div className="APIproduct-btns">
               <p>
-                <b>{product.price}kr</b>
+                <b>{product.price} SEK</b>
               </p>
-              {/* <button className='APIproduct-cart-btn'><IoMdCart /></button> */}
             </div>
           </div>
         ))}
