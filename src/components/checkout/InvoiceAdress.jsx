@@ -17,7 +17,7 @@ const InvoiceAdress = () => {
   return (
     <div className="invoice-adress-container">
       <form className="invoice-adress-form">
-        <h3>Invoice adress</h3>
+        <h3 className="invoice-adress-h3">Invoice adress</h3>
         <input
           type="text"
           {...firstNameInput}

@@ -1,18 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+:root {
+  --brand: #1a335b;
+}
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2%;
 }
 
 .logo {
-  width: 100px;
+  width: 200px;
 }
 
-.cart-icon {
-  width: 50px;
+.nav-links-container {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: space-between;
 }
 
 .nav-link {
   text-decoration: none;
-  margin-right: 20px;
+  color: var(--brand);
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-shopping-cart-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.shopping-cart {
+  font-size: 30px;
+  color: #1a335b;
 }

@@ -1,18 +1,17 @@
 import React from "react";
 import "../../styling/Navbar.css";
 import { Link } from "react-router-dom";
-import cartIcon from "../../assets/cart-icon.jpeg";
-import logo from "../../assets/logo.jpeg";
+import logo from "../../assets/logo.png";
+import { PiShoppingCart } from "react-icons/pi";
 
 const Navbar = () => {
   return (
     <div className="navbar-container">
       <Link to="/">
-        {" "}
         <img src={logo} alt="" className="logo" />
       </Link>
 
-      <div>
+      <div className="nav-links-container">
         <Link to="/" className="nav-link">
           Home
         </Link>
@@ -23,13 +22,12 @@ const Navbar = () => {
           Contact
         </Link>
       </div>
-      <div>
-        <div className="nav-shopping-cart-container">
-          <Link to="/cart" className="nav-link">
-            Shopping cart
-          </Link>
-        </div>
-        <img src={cartIcon} alt="" className="cart-icon" />
+      <div className="nav-shopping-cart-container">
+        <Link to="/cart" className="nav-link">
+          Shopping cart
+        </Link>
+
+        <PiShoppingCart className="shopping-cart" />
       </div>
     </div>
   );
