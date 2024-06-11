@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap");
+
 footer {
   background-color: #1f385f;
   color: white;
@@ -14,6 +16,7 @@ footer div {
 footer h1,
 footer h3 {
   margin-bottom: 10px;
+  font-family: "Lato", sans-serif;
 }
 
 footer a {
@@ -21,6 +24,7 @@ footer a {
   text-decoration: none;
   display: block;
   margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
 }
 
 footer a:hover {

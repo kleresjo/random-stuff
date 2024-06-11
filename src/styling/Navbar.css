@@ -3,10 +3,16 @@
   --brand: #1a335b;
 }
 
+.navbar-container-highest {
+  display: flex;
+  justify-content: center;
+}
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 80%;
   padding: 2%;
 }
 
@@ -42,4 +48,20 @@
 .shopping-cart {
   font-size: 30px;
   color: #1a335b;
+}
+
+.hamburgermenu {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-link {
+    display: none;
+  }
+
+  .hamburgermenu {
+    display: flex;
+    color: var(--brand);
+    font-size: 20px;
+  }
 }
