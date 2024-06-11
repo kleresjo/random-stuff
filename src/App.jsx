@@ -9,6 +9,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import { CheckoutProvider } from "./context/CheckoutContext";
 import ConfirmationPage from "./pages/ConfirmationPage";
+import Footer from "./components/Footer";
 import Navbar from "./components/navbar/Navbar";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/confirmation" element={<ConfirmationPage />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </CheckoutProvider>
     </CartProvider>

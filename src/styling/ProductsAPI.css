@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap');
+
 .API-section {
     display: flex;
     flex-direction: column;
@@ -7,32 +9,54 @@
     margin-bottom: 50px;
 }
 
-.APIproducts-h1 {
-    width: 80%;
-    font-weight: 400;
-    font-size: 36px;
-}
-
 .APIproduct-list {
-    width: 95%;
+    font-family: "Lato", sans-serif;
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
-    gap: 20px;
+    gap: 28px;
 }
 
 .APIproduct-div {
     background-color: #ffffff;
+    max-height: 450px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
-    -webkit-box-shadow: 6px 7px 5px -1px rgba(143, 143, 143, 0.29);
-    -moz-box-shadow: 6px 7px 5px -1px rgba(143, 143, 143, 0.29);
-    box-shadow: 6px 7px 5px -1px rgba(143, 143, 143, 0.29);
+    overflow: hidden;
+    border: transparent solid 1px;
+}
+
+.APIproduct-div:hover {
+    border: #cbcbcbbd solid 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .APIproduct-div img {
-    width: 70%;
+    max-height: 224px;
+    min-height: 224px;
+    object-fit:contain;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.APIproducts-h3 {
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+}
+
+.API-product-price {
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
 }
 
