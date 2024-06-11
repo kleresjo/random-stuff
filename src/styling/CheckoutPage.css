@@ -1,8 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 .checkoutpage-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  border: hotpink solid 2px;
+  width: 100%;
 }
 
 .checkoutpage-h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 100px;
   margin-bottom: 100px;
 }

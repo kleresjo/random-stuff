@@ -3,7 +3,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import ProductsList from "../components/ProductsList";
 import "../styling/ProductPage.css";
-import Navbar from "../components/navbar/Navbar";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -36,7 +35,6 @@ const ProductPage = () => {
 
   return (
     <>
-      <Navbar />
       <div className="product-container">
         <div className="product-content">
           <img

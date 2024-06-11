@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import Navbar from "../components/navbar/Navbar";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import "../styling/CartPageStyling.css";
@@ -43,7 +42,6 @@ const CartPage = () => {
 
   return (
     <>
-      <Navbar />
       <div className="center-cart">
         <h2>CartPage</h2>
         <div className="cart-placing">
