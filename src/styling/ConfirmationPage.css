@@ -18,3 +18,7 @@
 .confirmation-page-h1 {
   font-family: "Outfit", sans-serif;
 }
+
+.confirmation-page-button-container {
+  margin-top: 70px;
+}
