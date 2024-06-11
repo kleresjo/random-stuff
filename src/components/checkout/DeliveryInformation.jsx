@@ -13,7 +13,7 @@ const DeliveryInformation = () => {
   return (
     <div className="delivery-information-container">
       <form className="delivery-information-form">
-        <h3>Delivery</h3>
+        <h3 className="delivery-information-h3">Delivery</h3>
         <input
           type="text"
           {...firstNameInput}

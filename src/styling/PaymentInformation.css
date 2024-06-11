@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 .payment-information-container {
   display: flex;
   flex-direction: column;
+}
+
+.payment-information-h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .payment-information-content {
@@ -10,7 +18,7 @@
   width: 50%;
   border: 1px solid black;
   padding: 20px 20px 50px 20px;
-  background-color: rgb(221, 221, 221);
+  background-color: #eef0f1;
   align-items: start;
 }
 
