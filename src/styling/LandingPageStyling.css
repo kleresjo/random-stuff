@@ -1,0 +1,20 @@
+.landingpage-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landingpage-image {
+    width: 80%;
+    height: 550px;
+    object-position: bottom;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+.landingpage-image {
+        width: 100%;
+    }
+  
+}
