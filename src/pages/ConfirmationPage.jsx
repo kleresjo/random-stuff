@@ -24,7 +24,7 @@ const ConfirmationPage = () => {
           </p>
           <p className="confirmation-page-text">Ordernumber: 678319782</p>
         </div>
-        <div>
+        <div className="confirmation-page-button-container">
           <button onClick={handleShoppingButton} className="total-price-button">
             Continue shopping!
           </button>
