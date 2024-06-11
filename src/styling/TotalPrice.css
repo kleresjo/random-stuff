@@ -1,15 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap");
 
 .total-price-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
   border: 1px solid black;
   padding: 20px 20px 50px 20px;
   background-color: #eef0f1;
-  align-items: start;
+  top: 10%;
+  position: sticky;
 }
 
 .total-price-button {
