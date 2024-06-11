@@ -5,7 +5,7 @@ const PaymentInformation = () => {
   return (
     <div className="payment-information-container">
       <div className="payment-information-content">
-        <h3>Payment</h3>
+        <h3 className="payment-information-h3">Payment</h3>
         <p>How do you want to pay?</p>
         <div className="payment-information-radiobtn">
           <input type="radio" id="pay-direct" />{" "}
