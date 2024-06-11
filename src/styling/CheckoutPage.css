@@ -3,6 +3,9 @@
 .checkoutpage-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  border: hotpink solid 2px;
+  width: 100%;
 }
 
 .checkoutpage-h1 {
@@ -12,7 +15,4 @@
   font-weight: 600;
   margin-top: 100px;
   margin-bottom: 100px;
-}
-
-.checkoutpage-container-left {
 }
