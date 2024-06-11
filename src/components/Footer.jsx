@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import "../styling/Footer.css";
+import "../styling/LogoLight.css";
+import LogoLight from "./LogoLight";
+
 const Footer = () => {
   return (
     <footer>
       <div>
-        <h1>RandomStuff</h1>
+        <LogoLight />
         <AiFillInstagram />
         <FaFacebook />
       </div>
