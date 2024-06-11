@@ -1,10 +1,8 @@
 import React from "react";
-import Navbar from "../components/navbar/Navbar";
 
 const AboutUsPage = () => {
   return (
     <>
-      <Navbar />
       <div>
         <h1>Om oss</h1>
         <p>
