@@ -1,54 +1,72 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { IoMdCart } from "react-icons/io";
 import "../styling/ProductsAPI.css";
 
 function ProductsList() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(
+    localStorage.getItem("selectedCategory") || ""
+  );
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
-      .then(res => res.json())
-      .then(json => setProducts(json))
-      .catch(error => console.error('Error fetching data:', error));
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((json) => setProducts(json))
+      .catch((error) => console.error("Error fetching data:", error));
 
-    fetch('https://fakestoreapi.com/products/categories')
-      .then(res => res.json())
-      .then(json => setCategories(json))
-      .catch(error => console.error('Error fetching categories:', error));
+    fetch("https://fakestoreapi.com/products/categories")
+      .then((res) => res.json())
+      .then((json) => setCategories(json))
+      .catch((error) => console.error("Error fetching categories:", error));
   }, []);
 
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    localStorage.setItem("selectedCategory", category);
   };
 
-  const filteredProducts = selectedCategory 
-    ? products.filter(product => product.category === selectedCategory)
+  const filteredProducts = selectedCategory
+    ? products.filter((product) => product.category === selectedCategory)
     : products;
 
   return (
-    <section className='API-section'>
-      <div className='APIproduct-filter'>
-        <label htmlFor="category">See all the products</label>
-        <select id="category" value={selectedCategory} onChange={handleCategoryChange}>
-          <option value="">All</option>
-          {categories.map(category => (
-            <option key={category} value={category}>{category}</option>
+    <section className="API-section">
+      <h1 className="APIproducts-h1"></h1>
+      <div className="APIproduct-filter">
+        <div className="category-buttons">
+          <button
+            onClick={() => handleCategoryChange("")}
+            className={selectedCategory === "" ? "active" : ""}
+          >
+            see all products
+          </button>
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => handleCategoryChange(category)}
+              className={selectedCategory === category ? "active" : ""}
+            >
+              {category}
+            </button>
           ))}
-        </select>
+        </div>
       </div>
-      <div className='APIproduct-list'>
-        {filteredProducts.map(product => (
-          <div key={product.id} className='APIproduct-div'>
-          <div className='APIproduct-image-title'>
-            <Link to={`/product/${product.id}`}><img src={product.image} alt={product.title} /></Link>
-            <h3 className="APIproducts-h3">{product.title}</h3>
-            </div>
-            {/* <Link to={`/product/${product.id}`}>{product.category}</Link> */}
-            {/* <p>{product.description}</p> */}
-            <div className='APIproduct-btns'>
-              <p className='API-product-price'>{product.price} SEK</p>
+      <div className="APIproduct-list">
+        {filteredProducts.map((product) => (
+          <div key={product.id} className="APIproduct-div">
+            <Link to={`/product/${product.id}`}>
+              <img src={product.image} alt={product.title} />
+            </Link>
+            <h3>{product.title}</h3>
+            <Link to={`/product/${product.id}`}>{product.category}</Link>
+            <p>{product.description}</p>
+            <div className="APIproduct-btns">
+              <p>
+                <b>{product.price}kr</b>
+              </p>
+              {/* <button className='APIproduct-cart-btn'><IoMdCart /></button> */}
             </div>
           </div>
         ))}
