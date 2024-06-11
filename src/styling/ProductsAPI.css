@@ -57,9 +57,7 @@
   border: transparent solid 1px;
 }
 
-.APIproduct-div:hover {
-  border: #cbcbcbbd solid 1px;
-  border-radius: 10px;
+.APIproduct-div img:hover {
   cursor: pointer;
   overflow: hidden;
 }
@@ -78,6 +76,10 @@
   font-size: 20px;
   text-align: center;
   font-family: "Lato", sans-serif;
+}
+
+.APIproduct-h3 {
+  text-align: center;
 }
 
 .API-product-price {
