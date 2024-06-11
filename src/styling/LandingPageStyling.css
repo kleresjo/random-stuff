@@ -11,3 +11,10 @@
     object-position: bottom;
     object-fit: cover;
 }
+
+@media only screen and (max-width: 768px) {
+.landingpage-image {
+        width: 100%;
+    }
+  
+}

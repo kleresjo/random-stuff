@@ -60,3 +60,14 @@
     text-decoration: none;
 }
 
+@media only screen and (max-width: 768px) {
+
+    .APIproduct-div img {
+        width: 100%;
+        }
+
+    .APIproduct-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
