@@ -22,3 +22,13 @@
   margin-top: 50px;
   margin-bottom: 100px;
 }
+
+@media only screen and (max-width: 768px) {
+.checkoutpage-container {
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 20px;
+    width: 80%;
+    margin-bottom: 3%;
+  }
+}

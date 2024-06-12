@@ -15,19 +15,22 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  border: 1px solid black;
   padding: 20px 20px 50px 20px;
-  background-color: #eef0f1;
+  background-color: #EEF0F1;
   align-items: start;
 }
 
 .delivery-information-input {
-  width: 40%;
+  width: 98%;
+  height: 30px;
   margin-bottom: 10px;
+  padding: 5px;
 }
 
 .post-information {
   display: flex;
   flex-direction: column;
   align-items: start;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
 }

@@ -34,11 +34,11 @@ const DeliveryInformation = () => {
         />
         <div className="post-information">
           <h4>PostNord - Service point</h4>
-          <p>3-5 working days</p>
-          <p>Willys Ingenmansland</p>
-          <p>Ingemansväg 3</p>
-          <p>123 45 Ingenmansland</p>
-          <p>Sweden</p>
+          <p>3-5 working days <br />
+          Willys Ingenmansland  <br />
+          Ingemansväg 3  <br />
+          123 45 Ingenmansland  <br />
+          Sweden</p>
         </div>
       </form>
     </div>
