@@ -6,18 +6,18 @@
   flex-direction: row;
 }
 
-.lilita-one-regular {
+.lilita-one-regular-light {
   font-family: "Lilita One", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
-.logo-cursor {
+.logo-cursor-light {
   font-size: 30px;
   margin-left: 0px;
 }
 
-.logo-cursor:hover {
+.logo-cursor-light:hover {
   color: white;
   cursor: default;
 }

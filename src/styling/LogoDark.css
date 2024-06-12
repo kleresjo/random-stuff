@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 
-.logo-light {
+.logo-dark {
   display: flex;
   align-items: baseline;
   flex-direction: row;
@@ -22,4 +22,8 @@
 .logo-cursor:hover {
   color: #1f385f;
   cursor: default;
+}
+
+a {
+  text-decoration: none;
 }

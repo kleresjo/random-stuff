@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { PiShoppingCart } from "react-icons/pi";
 import { RxHamburgerMenu } from "react-icons/rx";
+import LogoDark from "../LogoDark";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
     <div className="navbar-container-highest">
       <div className="navbar-container">
         <Link to="/">
-          <img src={logo} alt="" className="logo" />
+          <LogoDark />
         </Link>
 
         <div className={"nav-links-container ${menuOpen ? 'open' : ''}"}>

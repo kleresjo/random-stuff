@@ -44,10 +44,11 @@ const ProductPage = () => {
           />
           <div className="product-details">
             <p className="product-title">{product.title}</p>
-            <p className="product-description">{product.description}</p>
             <p className="product-price">{product.price}kr</p>
+            <p className="product-description">{product.description}</p>
+
             <button className="product-button" onClick={handleBuyClick}>
-              Köp
+              Add to cart
             </button>
           </div>
         </div>
