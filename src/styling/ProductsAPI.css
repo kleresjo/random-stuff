@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap");
 
 .category-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 60px;
+  white-space: nowrap;
 }
 
 .category-buttons button {
@@ -16,7 +16,6 @@
   border-radius: 28px;
   transition: background-color 0.3s;
   background-color: transparent;
-  width: 180px;
 }
 
 .category-buttons button:hover {
@@ -90,12 +89,17 @@
 }
 
 @media only screen and (max-width: 768px) {
-
   .APIproduct-div img {
     width: 100%;
   }
 
   .APIproduct-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .category-buttons {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 10px;
   }
 }
