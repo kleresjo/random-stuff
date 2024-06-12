@@ -7,7 +7,7 @@ import "../styling/CheckoutPage.css";
 
 const CheckoutPage = () => {
   return (
-    <>
+    <div className="checkoutpage-first-container">
       <h1 className="checkoutpage-h1">Checkout</h1>
       <div className="checkoutpage-container">
         <div className="checkoutpage-container-left">
@@ -16,11 +16,11 @@ const CheckoutPage = () => {
           <DeliveryInformation />
           <PaymentInformation />
         </div>
-        <div>
+        <div className="checkoutpage-container-right">
           <TotalPrice />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
