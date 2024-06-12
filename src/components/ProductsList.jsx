@@ -8,6 +8,10 @@ function ProductsList() {
   const [selectedCategory, setSelectedCategory] = useState(
     localStorage.getItem("selectedCategory") || ""
   );
+  const [currentPage, setCurrentPage] = useState(
+    parseInt(localStorage.getItem("currentPage")) || 1
+  );
+  const productsPerPage = 4;
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -24,15 +28,47 @@ function ProductsList() {
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     localStorage.setItem("selectedCategory", category);
+    setCurrentPage(1);
+    localStorage.setItem("currentPage", 1);
   };
 
   const filteredProducts = selectedCategory
     ? products.filter((product) => product.category === selectedCategory)
     : products;
 
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+  const handlePageClick = (event) => {
+    const selectedPage = Number(event.target.id);
+    setCurrentPage(selectedPage);
+  };
+
+  const renderPageNumbers = () => {
+    const pageNumbers = [];
+    for (let i = 1; i <= totalPages; i++) {
+      pageNumbers.push(i);
+    }
+    return pageNumbers.map((number) => (
+      <button
+        key={number}
+        id={number}
+        onClick={handlePageClick}
+        className={currentPage === number ? "active" : ""}
+      >
+        {number}
+      </button>
+    ));
+  };
+
   return (
     <section className="API-section">
-      <h1 className="APIproducts-h1"></h1>
       <div className="APIproduct-filter">
         <div className="category-buttons">
           <button
@@ -53,7 +89,7 @@ function ProductsList() {
         </div>
       </div>
       <div className="APIproduct-list">
-        {filteredProducts.map((product) => (
+        {currentProducts.map((product) => (
           <div key={product.id} className="APIproduct-div">
             <Link to={`/product/${product.id}`}>
               <img src={product.image} alt={product.title} />
@@ -67,6 +103,7 @@ function ProductsList() {
           </div>
         ))}
       </div>
+      <div className="pagination">{renderPageNumbers()}</div>
     </section>
   );
 }
