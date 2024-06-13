@@ -6,13 +6,13 @@
 }
 
 .cart-link-btn-primary {
-  background-color: #8CBFDB;
+  background-color: #8cbfdb;
   color: rgb(0, 0, 0);
   border: none;
   padding: 15px 30px;
   font-size: 24px;
   font-weight: 400;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   width: 344px;
   border-radius: 4px;
   cursor: pointer;
@@ -24,7 +24,7 @@
 }
 
 .cart-link-btn-primary:active {
-  background-color: #3FA3DB;
+  background-color: #3fa3db;
 }
 
 .cart-link-btn-secondary {
@@ -34,18 +34,18 @@
   padding: 15px 30px;
   font-size: 24px;
   font-weight: 400;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   width: 344px;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .cart-link-btn-secondary:hover {
-  background-color: #A2C2E880;
+  background-color: #a2c2e880;
 }
 
 .cart-link-btn-secondary:active {
-  background-color: #A2C2E8;
+  background-color: #a2c2e8;
 }
 
 .shopping-cart-button-container {
@@ -128,7 +128,7 @@
   height: 90vh;
   position: sticky;
   top: 30px;
-  background-color: #EEF0F1;
+  background-color: #eef0f1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -140,18 +140,18 @@
 }
 
 .product-cart-h3 {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 24px;
 }
 
 .product-cart-p {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
 
 .product-cart-h5 {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 22px;
   font-weight: 600;
 }
@@ -172,21 +172,18 @@
   align-items: center;
 }
 
-@media only screen and (max-width: 768px) {
-
+@media only screen and (max-width: 1024px) {
   .cart-placing {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .cart-right-side-placing {
-      width: 70%;
-      background-color: transparent;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    } 
-  
-
+  .cart-right-side-placing {
+    width: 70%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

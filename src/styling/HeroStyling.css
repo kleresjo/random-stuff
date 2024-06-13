@@ -42,8 +42,9 @@
   margin: 30px 30px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .hero-h1 {
     width: 100%;
+    font-size: 48px;
   }
 }
