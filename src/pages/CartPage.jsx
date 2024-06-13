@@ -89,12 +89,12 @@ const CartPage = () => {
             </div>
             <div className="shopping-cart-row">
             <p className="product-cart-p">Shipment:</p> 
-            <p className="product-cart-p"> 70 SEK</p>
+            <p className="product-cart-p"> 49 SEK</p>
             </div>
             <hr className="cart-hr"></hr>
             <div className="shopping-cart-row">
             <h5 className="product-cart-h5">Total:</h5>
-            <h5 className="product-cart-h5">{getCartTotal(cart)+70} SEK </h5>
+            <h5 className="product-cart-h5">{getCartTotal(cart)+49} SEK </h5>
             </div>
             </div>
             <div className="cart-btn-container">
