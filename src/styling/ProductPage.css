@@ -82,7 +82,7 @@
   background-color: #67add4;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .product-content {
     flex-direction: column;
   }
