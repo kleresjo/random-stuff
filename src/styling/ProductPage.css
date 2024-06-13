@@ -69,13 +69,18 @@
 
 .product-button {
   background-color: #8cbfdb;
-  color: white;
+  color: rgb(0, 0, 0);
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 4px;
+  padding: 15px 30px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  width: 344px;
+  border-radius: 4px;
+  margin-bottom: 5%;
 }
 
 .product-button:hover {

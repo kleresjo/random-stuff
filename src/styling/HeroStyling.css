@@ -15,6 +15,7 @@
   width: 80%;
   flex-direction: column;
   justify-content: center;
+  pointer-events: none;
 }
 
 .hero-h1 {
