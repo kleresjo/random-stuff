@@ -88,7 +88,55 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 1024px) {
+.pagination button {
+  background-color: transparent;
+  margin: 5px;
+  padding: 10px 15px;
+  border: solid 1px black;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.pagination button.active {
+  background-color: #a2c2e8;
+}
+
+.pagination button:hover {
+  background-color: #a2c2e86b;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: transparent;
+  margin: 5px;
+  padding: 10px 15px;
+  border: solid 1px black;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.pagination button.active {
+  background-color: #a2c2e8;
+}
+
+.pagination button:hover {
+  background-color: #a2c2e86b;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
   .APIproduct-div img {
     width: 100%;
   }
