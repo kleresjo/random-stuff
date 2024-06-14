@@ -56,7 +56,7 @@ const Navbar = () => {
           <Link to="/cart" className="nav-link shopping-cart-text">
             Shopping cart
           </Link>
-          <PiShoppingCart className="shopping-cart" />
+          <Link to="/cart" > <PiShoppingCart className="shopping-cart" /></Link>
           {menuOpen ? (
             <RxCross2 className="hamburgermenu" onClick={handleMenuToggle} />
           ) : (
