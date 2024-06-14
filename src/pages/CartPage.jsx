@@ -42,9 +42,16 @@ const CartPage = () => {
   };
 
   return (
-    <>
-      <div className="center-cart">
-        <h2 className="about-h1">Shopping cart</h2>
+    <div className="center-cart">
+      <h2 className="about-h1">Shopping cart</h2>
+      {cart.length === 0 ? (
+        <div className="empty-cart-message">
+          <h3 className="product-cart-h3">Your cart is empty!</h3>
+          <Link to={"/"}>
+            <button className="cart-link-btn-primary">Continue shopping</button>
+          </Link>
+        </div>
+      ) : (
         <div className="cart-placing">
           <ul className="list-cart-placing">
             {cart.map((product, index) => (
@@ -62,43 +69,42 @@ const CartPage = () => {
 
                   <p className="product-cart-p"> Quantity:</p>
                   <div className="shopping-cart-button-container">
-                  <div className="shopping-cart-add-button-container">
-                    <button onClick={() => addProduct(index)} className="add-remove-btn">+</button>
-                    <p className="product-cart-p"> {product.itemCount}</p>
-                    <button onClick={() => removeProduct(index)} className="add-remove-btn">-</button>
+                    <div className="shopping-cart-add-button-container">
+                      <button onClick={() => addProduct(index)} className="add-remove-btn">+</button>
+                      <p className="product-cart-p"> {product.itemCount}</p>
+                      <button onClick={() => removeProduct(index)} className="add-remove-btn">-</button>
                     </div>
                     <div>
-                    <button
-                    className="cart-page-link-btn"
-                    onClick={() => removeFromCart(product.id)}
-                  >
-                    <IoTrashOutline />
-                  </button>
+                      <button
+                        className="cart-page-link-btn"
+                        onClick={() => removeFromCart(product.id)}
+                      >
+                        <IoTrashOutline />
+                      </button>
+                    </div>
                   </div>
-                  </div>
-
                 </div>
               </li>
             ))}
           </ul>
           <div className="cart-right-side-placing">
-          <div>
-          <div className="shopping-cart-row">
-            <p className="product-cart-p">Order value: </p> 
-            <p className="product-cart-p"> {getCartTotal(cart)} SEK</p>
-            </div>
-            <div className="shopping-cart-row">
-            <p className="product-cart-p">Shipment:</p> 
-            <p className="product-cart-p"> 49 SEK</p>
-            </div>
-            <hr className="cart-hr"></hr>
-            <div className="shopping-cart-row">
-            <h5 className="product-cart-h5">Total:</h5>
-            <h5 className="product-cart-h5">{getCartTotal(cart)+49} SEK </h5>
-            </div>
+            <div>
+              <div className="shopping-cart-row">
+                <p className="product-cart-p">Order value: </p>
+                <p className="product-cart-p"> {getCartTotal(cart)} SEK</p>
+              </div>
+              <div className="shopping-cart-row">
+                <p className="product-cart-p">Shipment:</p>
+                <p className="product-cart-p"> 49 SEK</p>
+              </div>
+              <hr className="cart-hr"></hr>
+              <div className="shopping-cart-row">
+                <h5 className="product-cart-h5">Total:</h5>
+                <h5 className="product-cart-h5">{getCartTotal(cart) + 49} SEK </h5>
+              </div>
             </div>
             <div className="cart-btn-container">
-            <Link to={"/payment"}>
+              <Link to={"/payment"}>
                 <button className="cart-link-btn-primary">Go to payment</button>
               </Link>
               <Link to={"/"}>
@@ -106,11 +112,10 @@ const CartPage = () => {
               </Link>
               <p className="product-cart-p">We take Klarna, Mastercard, Paypal and Visa</p>
             </div>
-            
           </div>
         </div>
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 
