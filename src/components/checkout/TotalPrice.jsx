@@ -6,11 +6,12 @@ import { useNavigate } from "react-router-dom";
 const TotalPrice = () => {
   const { cart, removeFromCart } = useContext(CartContext);
 
-  const getTotalPrice = (product) => {
-    return product.reduce((accumulator, object) => {
-      return object.itemCount * object.price;
+   const getTotalPrice = (cartToCount) => {
+    return cartToCount.reduce((accumulator, object) => {
+      return accumulator + object.price * object.itemCount;
     }, 0);
   };
+
 
   const getTotalPriceWithDelivery = (product) => {
     return product.reduce((accumulator, object) => {
@@ -41,7 +42,7 @@ const TotalPrice = () => {
         <div className="total-price-row-container">
           <h2 className="total-price-h2">Total Price: </h2>
           <h2 className="total-price-h2">
-            {getTotalPriceWithDelivery(cart)} SEK
+            {getTotalPriceWithDelivery(cart)+49} SEK
           </h2>
         </div>
       </div>
