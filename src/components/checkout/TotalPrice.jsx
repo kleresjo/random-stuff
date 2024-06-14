@@ -8,13 +8,13 @@ const TotalPrice = () => {
 
   const getTotalPrice = (product) => {
     return product.reduce((accumulator, object) => {
-      return accumulator + object.price;
+      return object.itemCount * object.price;
     }, 0);
   };
 
   const getTotalPriceWithDelivery = (product) => {
     return product.reduce((accumulator, object) => {
-      return accumulator + object.price;
+      return accumulator + object.itemCount * object.price;
     }, 49);
   };
 
