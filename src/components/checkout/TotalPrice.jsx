@@ -42,7 +42,7 @@ const TotalPrice = () => {
         <div className="total-price-row-container">
           <h2 className="total-price-h2">Total Price: </h2>
           <h2 className="total-price-h2">
-            {getTotalPriceWithDelivery(cart)+49} SEK
+            {getTotalPriceWithDelivery(cart)} SEK
           </h2>
         </div>
       </div>
