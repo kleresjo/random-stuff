@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
+import { AiOutlineLeft } from "react-icons/ai";
 import ProductsList from "../components/ProductsList";
 import "../styling/ProductPage.css";
 
@@ -36,6 +37,15 @@ const ProductPage = () => {
   return (
     <>
       <div className="product-container">
+        <div className="back-to-homePage-navigation">
+          <div
+            className="back-to-homePage-button"
+            onClick={() => navigate("/")}
+          >
+            <AiOutlineLeft size={24} />
+            <span className="back-to-home-page-text">Home</span>
+          </div>
+        </div>
         <div className="product-content">
           <img
             className="product-image"
