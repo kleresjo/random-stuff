@@ -11,7 +11,8 @@
   margin: 0 auto;
   border-radius: 8px;
   justify-content: center;
-  padding-bottom: 200px;
+  margin-bottom: 200px;
+  font-family: “Outfit”, sans-serif;
 }
 
 .product-title {
@@ -28,6 +29,7 @@
   width: 100%;
   font-family: Lato, Helvetica, sans-serif;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .product-image {
@@ -39,6 +41,7 @@
   border-radius: 8px;
   padding-right: 48px;
   object-position: center;
+  margin-top: 50px;
 }
 
 .product-details {
@@ -78,7 +81,6 @@
   font-size: 24px;
   font-weight: 400;
   font-family: "Lato", sans-serif;
-  width: 344px;
   border-radius: 4px;
   margin-bottom: 5%;
 }
@@ -87,19 +89,58 @@
   background-color: #67add4;
 }
 
-@media screen and (max-width: 1024px) {
+.back-to-homePage-navigation {
+  display: flex;
+  border-radius: 4px;
+  font-size: smaller;
+  cursor: pointer;
+  margin-right: 680px;
+  margin-bottom: 50px;
+}
+
+.back-to-homePage-button {
+  display: flex;
+  padding-right: 5px;
+}
+
+.back-to-home-page-text {
+  margin-top: 4px;
+  margin-left: 5px;
+}
+
+.back-to-homePage-navigation:hover {
+  background-color: #a2c2e867;
+}
+
+@media screen and (max-width: 768px) {
   .product-content {
     flex-direction: column;
+    margin-top: 0px;
   }
 
+  .product-container {
+    margin-right: 10px;
+    padding-top: 20px;
+  }
   .product-image {
     max-width: 50%;
     align-self: center;
     max-height: 30%;
+    margin-left: 50px;
   }
 
   .product-details {
     max-width: 70%;
     align-self: center;
+  }
+
+  .back-to-homePage-navigation {
+    margin-right: 400px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .back-to-homePage-navigation {
+    margin-right: 300px;
   }
 }

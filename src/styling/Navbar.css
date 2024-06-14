@@ -26,9 +26,7 @@
   width: 30%;
   justify-content: space-around;
   padding-left: 15px;
-
 }
-
 
 .nav-links-container.open {
   display: flex;
@@ -36,7 +34,7 @@
   position: absolute;
   top: 70px;
   right: 10px;
-  background-color: #A2C2E8;
+  background-color: #a2c2e8;
   z-index: 1000;
   height: 300px;
   border-radius: 4px;
@@ -50,10 +48,6 @@
 .nav-links-container.open a {
   opacity: 1;
   transition: opacity 0.3s ease 0.3s;
-}
-
-.nav-links-container.open a.nav-link {
- 
 }
 
 .nav-link {
@@ -79,13 +73,16 @@
   color: #1a335b;
 }
 
+.shopping-cart-text {
+  display: inline;
+}
+
 .hamburgermenu {
   display: none;
   cursor: pointer;
   color: var(--brand);
   font-size: 24px;
 }
-
 
 @media only screen and (max-width: 768px) {
   .nav-links-container {
@@ -104,6 +101,10 @@
 
   .hamburgermenu {
     display: block;
+  }
+
+  .shopping-cart-text {
+    display: none;
   }
 }
 

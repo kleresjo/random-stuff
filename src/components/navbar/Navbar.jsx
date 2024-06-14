@@ -26,7 +26,6 @@ const Navbar = () => {
     };
   }, []);
 
-
   return (
     <div className="navbar-container-highest">
       <div className="navbar-container">
@@ -38,22 +37,33 @@ const Navbar = () => {
           <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
             Home
           </Link>
-          <Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}> 
+          <Link
+            to="/about"
+            className="nav-link"
+            onClick={() => setMenuOpen(false)}
+          >
             About us
           </Link>
-          <Link to="/contact" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <Link
+            to="/contact"
+            className="nav-link"
+            onClick={() => setMenuOpen(false)}
+          >
             Contact
           </Link>
         </div>
         <div className="nav-shopping-cart-container">
-          <Link to="/cart" className="nav-link">
+          <Link to="/cart" className="nav-link shopping-cart-text">
             Shopping cart
           </Link>
           <PiShoppingCart className="shopping-cart" />
           {menuOpen ? (
             <RxCross2 className="hamburgermenu" onClick={handleMenuToggle} />
           ) : (
-            <RxHamburgerMenu className="hamburgermenu" onClick={handleMenuToggle} />
+            <RxHamburgerMenu
+              className="hamburgermenu"
+              onClick={handleMenuToggle}
+            />
           )}
         </div>
       </div>
