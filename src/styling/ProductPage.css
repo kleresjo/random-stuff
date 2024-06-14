@@ -42,6 +42,7 @@
   padding-right: 48px;
   object-position: center;
   margin-top: 50px;
+  object-fit: contain;
 }
 
 .product-details {
