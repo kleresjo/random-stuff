@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+.checkoutpage-first-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.checkoutpage-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 80%;
+}
+
+.checkoutpage-h1 {
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  color: #1a335b;
+}
+
+
+.back-to-cart-navigation {
+  display: flex;
+  border-radius: 4px;
+  font-size: smaller;
+  cursor: pointer;
+  margin-right: 680px;
+  margin-bottom: 10px;
+  font-family: Lato, Helvetica, sans-serif;
+  margin-top: 30px;
+}
+
+
+.back-to-cart-button {
+  display: flex;
+  padding-right: 5px;
+}
+
+.back-to-cart-page-text {
+  margin-top: 4px;
+  margin-left: 5px;
+}
+
+.back-to-cart-navigation:hover {
+  background-color: #a2c2e867;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .checkoutpage-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 80%;
+    margin-bottom: 3%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .back-to-cart-navigation {
+    margin-right: 200px;
+  }
+}
+
+
+@media only screen and (max-width: 460px) {
+  .back-to-cart-navigation {
+    margin-right: 250px;
+  }
+}

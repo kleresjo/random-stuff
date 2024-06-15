@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+:root {
+  --brand: #1a335b;
+}
+
+.navbar-container-highest {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 2%;
+}
+
+.logo {
+  width: 200px;
+}
+
+.nav-links-container {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: space-around;
+  padding-left: 15px;
+}
+
+.nav-links-container.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  background-color: #a2c2e8;
+  z-index: 1000;
+  height: 300px;
+  border-radius: 4px;
+  padding: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
+  transform: translateY(-20px);
+  visibility: visible;
+}
+
+.nav-links-container.open a {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.3s;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--brand);
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-shopping-cart-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.shopping-cart {
+  font-size: 30px;
+  color: #1a335b;
+}
+
+.shopping-cart-text {
+  display: inline;
+}
+
+.hamburgermenu {
+  display: none;
+  cursor: pointer;
+  color: var(--brand);
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-links-container {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+  }
+
+  .nav-links-container.open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .hamburgermenu {
+    display: block;
+  }
+
+  .shopping-cart-text {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .nav-links-container.open {
+    width: calc(100% - 40px);
+    right: 20px;
+    left: 20px;
+  }
+}

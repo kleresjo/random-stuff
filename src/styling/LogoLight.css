@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+.logo-light {
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+}
+
+.lilita-one-regular-light {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.logo-cursor-light {
+  font-size: 30px;
+  margin-left: 0px;
+}
+
+.logo-cursor-light:hover {
+  color: white;
+  cursor: default;
+}

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+.payment-information-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-information-h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.payment-information-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 20px 20px 50px 20px;
+  background-color: #eef0f1;
+  align-items: start;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+.payment-information-radiobtn {
+  display: flex;
+  gap: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}

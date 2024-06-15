@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap");
+
+.total-price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px 50px 20px;
+  background-color: #eef0f1;
+  top: 10%;
+  position: sticky;
+}
+
+.total-price-button {
+  padding: 15px 80px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: #8cbfdb;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+}
+
+.total-price-button:hover {
+  background-color: #67add4;
+}
+
+.total-price-h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.total-price-h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+}
+
+.total-price-text {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+.total-price-row-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.total-price-hr {
+  color: black;
+  width: 100%;
+}
+
+.total-price-space {
+  width: 100%;
+}
+
+.total-price-space-btn {
+  justify-items: center;
+  align-self: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .total-price-button {
+    padding: 15px 50px;
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap");
+
+footer {
+  background-color: #1f385f;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+footer div {
+  margin: 10px;
+}
+
+footer h1,
+footer h3 {
+  margin-bottom: 10px;
+  font-family: "Lato", sans-serif;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer div p {
+  margin: 5px 0;
+}
+
+footer div p a {
+  color: white;
+  text-decoration: none;
+}
+
+footer div p a:hover {
+  text-decoration: underline;
+}
+
+footer svg {
+  margin: 0 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+footer svg:hover {
+  color: #ddd;
+}
+
+@media (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer div {
+    text-align: center;
+  }
+
+  footer svg {
+    font-size: 20px;
+  }
+}

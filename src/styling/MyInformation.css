@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+.my-information-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-information-h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.my-information-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 20px 20px 50px 20px;
+  background-color: #eef0f1;
+  align-items: start;
+}
+
+.my-information-input {
+  width: 98%;
+  height: 30px;
+  margin-bottom: 10px;
+  padding: 5px;
+}

@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap");
+
+.about-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 50px;
+  color: #1a335b;
+}
+
+.about-p {
+  width: 55%;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 2%;
+}
+
+.about-image {
+  width: 60%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-h2 {
+  font-size: 49px;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.about-image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+.about-image-container img {
+  height: 492px;
+  width: 400px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .about-image-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-h2 {
+    width: 50%;
+    font-size: 49px;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+  }
+}

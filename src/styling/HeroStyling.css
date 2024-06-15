@@ -1,0 +1,55 @@
+.hero-section {
+  font-family: "Outfit", sans-serif;
+  height: 410px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  text-align: left;
+}
+
+.hero-text-section {
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-h1 {
+  margin: 0;
+  font-size: 68px;
+  font-weight: 600;
+  width: 70%;
+  line-height: 1;
+  margin-top: 50px;
+  color: #1a335b;
+}
+
+.hero-h5 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  width: 80%;
+}
+
+.APIproduct-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 30px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero-text-section {
+    margin-top: 50px;
+  }
+
+  .hero-h1 {
+    width: 100%;
+    font-size: 48px;
+  }
+}
