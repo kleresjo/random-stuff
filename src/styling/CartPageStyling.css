@@ -186,22 +186,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
     .list-cart-content-placing {
       flex-direction: column;
       margin-bottom: 25px;
+      padding: 10px;
     }
 
   .cart-right-side-placing {
     width: 90vw;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  .list-cart-placing {
-    width: 100%;
   }
 
   .list-cart-content-placing {
