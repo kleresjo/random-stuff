@@ -57,6 +57,7 @@ const CartPage = () => {
         </div>
       ) : (
         <div className="cart-placing">
+        <div className="cart-container">
           <ul className="list-cart-placing">
             {cart.map((product, index) => (
               <li className="list-cart-content-placing" key={index}>
@@ -87,10 +88,13 @@ const CartPage = () => {
                       </button>
                     </div>
                   </div>
+
                 </div>
               </li>
+
             ))}
           </ul>
+          </div>
           <div className="cart-right-side-placing">
             <div>
               <div className="shopping-cart-row">
