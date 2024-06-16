@@ -13,6 +13,10 @@ const CartPage = () => {
     }, 0);
   };
 
+  const formatPrice = (price) => {
+    return price.toFixed(2);
+  };
+
   const addProduct = (index) => {
     const updatedCart = cart.map((p, i) => {
       if (i === index) {
@@ -65,7 +69,7 @@ const CartPage = () => {
                 </div>
                 <div className="list-cart-info">
                   <h3 className="product-cart-h3">{product.title}</h3>
-                  <p className="product-cart-p"> {product.price} SEK</p>
+                  <p className="product-cart-p"> {formatPrice(product.price)} SEK</p>
 
                   <p className="product-cart-p"> Quantity:</p>
                   <div className="shopping-cart-button-container">
@@ -91,16 +95,16 @@ const CartPage = () => {
             <div>
               <div className="shopping-cart-row">
                 <p className="product-cart-p">Order value: </p>
-                <p className="product-cart-p"> {getCartTotal(cart)} SEK</p>
+                <p className="product-cart-p"> {formatPrice(getCartTotal(cart))} SEK</p>
               </div>
               <div className="shopping-cart-row">
                 <p className="product-cart-p">Shipment:</p>
-                <p className="product-cart-p"> 49 SEK</p>
+                <p className="product-cart-p"> {formatPrice(49)} SEK</p>
               </div>
               <hr className="cart-hr"></hr>
               <div className="shopping-cart-row">
                 <h5 className="product-cart-h5">Total:</h5>
-                <h5 className="product-cart-h5">{getCartTotal(cart) + 49} SEK </h5>
+                <h5 className="product-cart-h5">{formatPrice(getCartTotal(cart) + 49)} SEK </h5>
               </div>
             </div>
             <div className="cart-btn-container">
