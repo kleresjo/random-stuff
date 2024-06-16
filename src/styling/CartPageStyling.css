@@ -31,6 +31,8 @@
   height: 200px;
   object-fit: contain;
   object-position: center;
+  display: flex;
+  align-items: center;
 }
 
 .cart-placing {
@@ -182,21 +184,32 @@
 }
 
 @media only screen and (max-width: 1024px) {
+
   .cart-placing {
     flex-direction: column;
-    justify-content: center;
+    justify-self: center;
     align-items: center;
     width: 100%;
   }
 
+  .list-cart-placing {
+    width: 100%;
+    padding: 0;
+    margin-left: 10%;
+  }
+
     .list-cart-content-placing {
-      flex-direction: column;
-      margin-bottom: 25px;
-      padding: 10px;
+    margin-bottom: 25px;
+    }
+    
+
+    .shopping-cart-button-container {
+    gap: 20px;
     }
 
   .cart-right-side-placing {
-    width: 90vw;
+    width: 90%;
+    padding: 5%;
     height: 100%;
     display: flex;
     flex-direction: column;
