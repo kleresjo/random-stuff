@@ -75,9 +75,9 @@ const CartPage = () => {
                   <p className="product-cart-p"> Quantity:</p>
                   <div className="shopping-cart-button-container">
                     <div className="shopping-cart-add-button-container">
-                      <button onClick={() => addProduct(index)} className="add-remove-btn">+</button>
+                    <button onClick={() => removeProduct(index)} className="add-remove-btn">-</button>
                       <p className="product-cart-p"> {product.itemCount}</p>
-                      <button onClick={() => removeProduct(index)} className="add-remove-btn">-</button>
+                      <button onClick={() => addProduct(index)} className="add-remove-btn">+</button>
                     </div>
                     <div>
                       <button
