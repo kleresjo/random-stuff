@@ -41,6 +41,7 @@
   object-position: center;
   display: flex;
   align-items: center;
+  margin-right: 15px;
 }
 
 .cart-placing {
@@ -52,7 +53,7 @@
 }
 
 .cart-right-side-placing {
-  width: 50%;
+  width: 40%;
   height: 90vh;
   position: sticky;
   top: 10px;
@@ -154,9 +155,11 @@
   background-color: transparent;
   height: 30px;
   width: 30px;
+  font-size: 16px;
   border: none;
   cursor: pointer;
-  color: black;
+  color: rgb(0, 0, 0);
+  border-radius: 0px;
 }
 
 .cart-page-link-btn {
@@ -166,11 +169,14 @@
   background-color: transparent;
   color: rgb(0, 0, 0);
   border: solid black 1px;
-  font-size: 16px;
   border-radius: 0px;
-  width: 35px;
-  height: 35px;
+  width: 31px;
+  height: 31px;
   cursor: pointer;
+}
+
+.trash-icon {
+  font-size: 16px;
 }
 
 .cart-page-link-btn:hover {

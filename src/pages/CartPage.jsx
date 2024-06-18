@@ -84,7 +84,7 @@ const CartPage = () => {
                         className="cart-page-link-btn"
                         onClick={() => removeFromCart(product.id)}
                       >
-                        <IoTrashOutline />
+                        <IoTrashOutline  className="trash-icon"/>
                       </button>
                     </div>
                   </div>
