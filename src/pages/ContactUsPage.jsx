@@ -34,8 +34,10 @@ const ContactUsPage = () => {
         <div className="contact-box">
           <p><b>Social Media:</b> <br />
           Follow us on social media for the latest updates and news!<br />
-          Facebook: facebook.com/randomstuffTwitter: twitter.com/randomstuffInstagram: <br />
-          instagram.com/randomstuffLinkedIn: linkedin.com/company/randomstuff
+          Facebook: facebook.com/randomstuff <br />
+          Twitter: twitter.com/randomstuff <br />
+          Instagram: instagram.com/randomstuff <br />
+          LinkedIn: linkedin.com/company/randomstuff
           </p>
         </div>
         <div className="contact-box">
