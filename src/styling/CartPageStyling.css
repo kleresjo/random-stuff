@@ -8,6 +8,7 @@
 }
 
  .cart-container {
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +18,7 @@
 .list-cart-placing {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   width: 80%;
 }
 
